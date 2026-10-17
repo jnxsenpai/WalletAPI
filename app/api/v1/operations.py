@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 
-from app.api.v1.wallets import router
+
 from app.schemas import OperationRequest
 from app.service import operations as operations_service
 

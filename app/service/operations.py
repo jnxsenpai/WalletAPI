@@ -22,7 +22,7 @@ def add_income(operation: OperationRequest):
     }
 
 def add_expense(operation: OperationRequest):
-    if wallets_repository.is_wallet_exist(operation.wallet_name):
+    if not wallets_repository.is_wallet_exist(operation.wallet_name):
         raise HTTPException(
             status_code=404,
             detail=f"Wallet {operation.wallet_name} not found"

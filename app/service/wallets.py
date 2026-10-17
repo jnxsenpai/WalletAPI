@@ -7,7 +7,7 @@ def get_wallet(wallet_name: str | None = None):
     # Если имя не указано - считаем общий баланс
     if wallet_name is None:
         wallets = wallets_repository.get_all_wallets()
-        return {"total_balace": sum(wallets.values())}
+        return {"total_balance": sum(wallets.values())}
     # Проверяем существуем ли кошелек
     if not wallets_repository.is_wallet_exist(wallet_name):
         raise HTTPException(
